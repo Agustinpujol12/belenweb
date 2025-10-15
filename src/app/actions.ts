@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import * as z from 'zod';
 
@@ -26,25 +26,25 @@ export async function submitContactForm(
   }
 
   try {
-    // Here you would integrate with a service like Resend, Nodemailer,
-    // or save to a database (e.g., Firebase Firestore).
-    // For this example, we'll just log it and simulate a delay.
-    console.log('New contact form submission:');
-    console.log('Name:', validatedFields.data.name);
-    console.log('Email:', validatedFields.data.email);
-    console.log('Message:', validatedFields.data.message);
+    // Ejemplo usando Formspree (puedes usar otro servicio similar)
+    const res = await fetch("https://formspree.io/f/{tu_form_id}", {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: JSON.stringify(validatedFields.data),
+    });
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    if (!res.ok) {
+      throw new Error("No se pudo enviar el mensaje.");
+    }
 
     return {
       success: true,
       message: 'Mensaje enviado con éxito.',
     };
   } catch (error) {
-    console.error('Error submitting contact form:', error);
     return {
       success: false,
-      message: 'Ocurrió un error en el servidor. Inténtalo más tarde.',
+      message: 'Ocurrió un error al enviar el mensaje.',
     };
   }
 }
