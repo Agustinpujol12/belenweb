@@ -1,16 +1,24 @@
+# Nombre del Workflow
 name: Deploy Next.js site to Pages
 
 on:
+  # Se ejecuta cada vez que haces un 'push' a la rama 'main'
   push:
     branches: ["main"]
+
+  # Te permite ejecutarlo manualmente desde la pestaña Actions
   workflow_dispatch:
 
+# ❗️ PASO CLAVE: AÑADIR ESTOS PERMISOS ❗️
+# Le da permiso a la Action para leer tu código y escribir en GitHub Pages.
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Tareas que se ejecutarán
 jobs:
+  # Tarea de construcción
   build:
     runs-on: ubuntu-latest
     steps:
@@ -30,6 +38,7 @@ jobs:
         with:
           path: ./out
 
+  # Tarea de despliegue
   deploy:
     environment:
       name: github-pages
