@@ -1,0 +1,70 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract technology background for hero section",
+      "imageUrl": "https://picsum.photos/seed/hero-bg/1200/800",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "about-photo",
+      "description": "Professional photo of the creator",
+      "imageUrl": "https://picsum.photos/seed/creator-photo/400/500",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "portfolio-1",
+      "description": "Portfolio item for video production",
+      "imageUrl": "https://picsum.photos/seed/p1/600/400",
+      "imageHint": "video production"
+    },
+    {
+      "id": "portfolio-2",
+      "description": "Portfolio item for graphic design",
+      "imageUrl": "https://picsum.photos/seed/p2/600/400",
+      "imageHint": "graphic design"
+    },
+    {
+      "id": "portfolio-3",
+      "description": "Portfolio item for digital art",
+      "imageUrl": "https://picsum.photos/seed/p3/600/400",
+      "imageHint": "digital art"
+    },
+    {
+      "id": "portfolio-4",
+      "description": "Portfolio item for abstract animation",
+      "imageUrl": "https://picsum.photos/seed/p4/600/400",
+      "imageHint": "abstract animation"
+    },
+    {
+      "id": "portfolio-5",
+      "description": "Portfolio item for logo design",
+      "imageUrl": "https://picsum.photos/seed/p5/600/400",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "portfolio-6",
+      "description": "Portfolio item for branding",
+      "imageUrl": "https://picsum.photos/seed/p6/600/400",
+      "imageHint": "branding"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Avatar for first testimonial",
+      "imageUrl": "https://picsum.photos/seed/t1/100/100",
+      "imageHint": "person face"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Avatar for second testimonial",
+      "imageUrl": "https://picsum.photos/seed/t2/100/100",
+      "imageHint": "person face"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Avatar for third testimonial",
+      "imageUrl": "https://picsum.photos/seed/t3/100/100",
+      "imageHint": "person face"
+    }
+  ]
+}
