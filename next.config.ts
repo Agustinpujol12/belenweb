@@ -1,14 +1,24 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // --- OPCIONES PARA DESPLIEGUE EN GITHUB PAGES ---
+  output: 'export',
+  basePath: '/belenweb',
+
+  // --- TUS OPCIONES ORIGINALES (LAS MANTENEMOS) ---
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
+
+  // --- COMBINACIÓN DE LA CONFIGURACIÓN DE IMÁGENES ---
   images: {
+    // Necesario para que las imágenes funcionen en la exportación estática
+    unoptimized: true,
+    
+    // Tus patrones de imágenes remotas que ya tenías
     remotePatterns: [
       {
         protocol: 'https',
